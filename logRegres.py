@@ -9,7 +9,7 @@ def loadDataSet():    # 读样本集
         labelMat.append(int(lineArr[2]))
     return  dataMat, labelMat
 def sigmoid(inX):             # sigmoid函数
-    return 1.0/(1+exp(-inX))   # exp() 方法返回x的指数
+    return 1.0/(1+exp(-inX))   # exp() 方法返回x的指数,exp方法对全部元素操作
 def gradAscent(dataMatIn,classLabels):
     dataMatrix = mat(dataMatIn)      #转为矩阵
     labelMat = mat(classLabels).transpose()   #对标签进行转置
