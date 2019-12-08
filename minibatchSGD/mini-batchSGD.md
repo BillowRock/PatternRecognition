@@ -22,7 +22,7 @@ $$J(\theta)=-\frac{1}{m} \sum_{i=1}^{m} y_i \log \left(h_{\theta}\left(x^{(i)}\r
 
 计算$J(\theta)$对第$j$个参数分量$\theta_j$求偏导,得到交叉熵对参数的导数:
 $$\frac{\partial}{\partial \theta_{j}} J(\theta)=\frac{1}{m} \sum_{i=1}^{m}\left(h_{\theta}\left(x^{(i)}\right)-y_i\right) x_{j}^{(i)}$$
-目的为求得最小的$J(\theta)$：$\{$  
+目的为求得最小的$J(\theta)$：{  
 $$\theta_{j}:=\theta_{j}-\alpha \frac{\partial}{\partial \theta_{j}} J(\theta)$$  
-同时对所有的$\theta_j$更新其中$j=1,2,3$    
-$\}$
+同时对所有的$\theta_j$更新其中$j=1,2,3$  
+}
