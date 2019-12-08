@@ -22,4 +22,3 @@ $$J(\theta)=-\frac{1}{m} \sum_{i=1}^{m} y_i \log \left(h_{\theta}\left(x^{(i)}\r
 
 计算$J(\theta)$对第$j$个参数分量$\theta_j$求偏导,得到交叉熵对参数的导数:
 $$\frac{\partial}{\partial \theta_{j}} J(\theta)=\frac{1}{m} \sum_{i=1}^{m}\left(h_{\theta}\left(x^{(i)}\right)-y_i\right) x_{j}^{(i)}$$
-可以看出，**mini-batch学习中的交叉熵损失函数，是mini-batch中所有N个训练数据的正确标签对应输出的自然对数之和的负数**
