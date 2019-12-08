@@ -23,13 +23,13 @@ $$J(\theta)=-\frac{1}{m} \sum_{i=1}^{m} y_i \log \left(h_{\theta}\left(\boldsymb
 计算$J(\theta)$对第$j$个参数分量$\theta_j$求偏导,得到交叉熵对参数的导数:
 $$\frac{\partial}{\partial \theta_{j}} J(\theta)=\frac{1}{m} \sum_{i=1}^{m}\left(h_{\theta}\left(\boldsymbol x^{(i)}\right)-y_i\right) x_{j}^{(i)}$$
 目的为求得最小的$J(\theta)$：  
-重复$\{$  
+重复{  
 $$\theta_{j}:=\theta_{j}-\alpha \frac{\partial}{\partial \theta_{j}} J(\theta)$$  
 同时对所有的$\theta_j$更新，其中$j=1,2,3$  
-$\}$  
+}  
 代入偏导，即为：  
-重复$\{$  
+重复{  
 $$\theta_{j}:=\theta_{j}-\alpha \frac{1}{m} \sum_{i=1}^{m}\left(h_{\theta}\left(\boldsymbol x^{(i)}\right)-y_i\right) x_{j}^{(i)}$$  
 同时对所有的$\theta_j$更新，其中$j=1,2,3$，$\alpha$为步长   
-$\}$  
+}  
 可以看出，$\theta_{j}$更新和线性回归中梯度下降算法的$\theta_{j}$更新一致，差别的是假设函数$h_{\theta}$不同。
