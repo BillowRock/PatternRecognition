@@ -16,13 +16,20 @@ $x_i=(x_i-min)/(max-min)$，对于表示RGB格式，其中$min=0$，$max-min=255
 $$h_{\theta}\left(x^{(i)}\right)=\frac{1}{1+e^{-\boldsymbol\theta^{T} x^{(i)}}}$$
 其中$\boldsymbol x^{(i)}$为第$i$组数据，$\boldsymbol x^{(i)}=[1,x_1^{(i)},x_2^{(i)},x_3^{(i)}]^T$为$3+1$维向量  
 则交叉熵损失函数为：
-$$J(\theta)=-\frac{1}{m} \sum_{i=1}^{m} y_i \log \left(h_{\theta}\left(x^{(i)}\right)\right)+\left(1-y_i\right) \log \left(1-h_{\theta}\left(x^{(i)}\right)\right)$$
+$$J(\theta)=-\frac{1}{m} \sum_{i=1}^{m} y_i \log \left(h_{\theta}\left(\boldsymbol x^{(i)}\right)\right)+\left(1-y_i\right) \log \left(1-h_{\theta}\left(\boldsymbol x^{(i)}\right)\right)$$
 - $m$是mini-batch的size,即有多少个数据，如$100$，除以$m$是为了正规化，求出单个数据的“平均损失函数”，以获得和训练数据数量无关的统一指标
 - $y_i=1$时第二项$\left(1-y_i\right)=0$，$y_i=0$时，则第一项为0  
 
 计算$J(\theta)$对第$j$个参数分量$\theta_j$求偏导,得到交叉熵对参数的导数:
-$$\frac{\partial}{\partial \theta_{j}} J(\theta)=\frac{1}{m} \sum_{i=1}^{m}\left(h_{\theta}\left(x^{(i)}\right)-y_i\right) x_{j}^{(i)}$$
-目的为求得最小的$J(\theta)$：{  
+$$\frac{\partial}{\partial \theta_{j}} J(\theta)=\frac{1}{m} \sum_{i=1}^{m}\left(h_{\theta}\left(\boldsymbol x^{(i)}\right)-y_i\right) x_{j}^{(i)}$$
+目的为求得最小的$J(\theta)$：  
+重复$\{$  
 $$\theta_{j}:=\theta_{j}-\alpha \frac{\partial}{\partial \theta_{j}} J(\theta)$$  
-同时对所有的$\theta_j$更新其中$j=1,2,3$  
-}
+同时对所有的$\theta_j$更新，其中$j=1,2,3$  
+$\}$  
+代入偏导，即为：  
+重复$\{$  
+$$\theta_{j}:=\theta_{j}-\alpha \frac{1}{m} \sum_{i=1}^{m}\left(h_{\theta}\left(\boldsymbol x^{(i)}\right)-y_i\right) x_{j}^{(i)}$$  
+同时对所有的$\theta_j$更新，其中$j=1,2,3$，$\alpha$为步长   
+$\}$  
+可以看出，$\theta_{j}$更新和线性回归中梯度下降算法的$\theta_{j}$更新一致，差别的是假设函数$h_{\theta}$不同。
