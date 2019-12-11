@@ -45,7 +45,7 @@ $\}$
 ## 运行结果
 
 # 欠拟合
-!(https://github.com/youyou-579/123/blob/master/2.8.jpg?raw=true)  
+![训练损失](https://github.com/BillowRock/PatternRecognition/raw/master/minibatchSGD/underfit_loss.png)
 可以看出在欠拟合情况下无法进行拟合，训练后对测试集分类正确率仅有50%左右，基本没效果
 
 # 合理拟合
