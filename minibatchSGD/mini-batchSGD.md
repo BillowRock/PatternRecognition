@@ -45,13 +45,19 @@ $\}$
 ## 运行结果
 
 # 欠拟合
-![训练损失](https://github.com/BillowRock/PatternRecognition/raw/master/minibatchSGD/underfit_loss.png)
+![训练损失](https://github.com/BillowRock/PatternRecognition/raw/master/minibatchSGD/underfit_loss.png)  
+![欠拟合](https://github.com/BillowRock/PatternRecognition/raw/master/minibatchSGD/underfit_circle.png)  
+
 可以看出在欠拟合情况下无法进行拟合，训练后对测试集分类正确率仅有50%左右，基本没效果
 
 # 合理拟合
-!(https://github.com/youyou-579/123/blob/master/2.8.jpg?raw=true)  
+![训练损失](https://github.com/BillowRock/PatternRecognition/raw/master/minibatchSGD/fit_loss.png)  
+![合理拟合拟合](https://github.com/BillowRock/PatternRecognition/raw/master/minibatchSGD/fit_circle.png)  
+
 选取正确多项式，拟合结果正常
 
 # 过拟合
-!(https://github.com/youyou-579/123/blob/master/2.8.jpg?raw=true)  
+![训练损失](https://github.com/BillowRock/PatternRecognition/raw/master/minibatchSGD/overfit_loss.png)  
+![欠拟合](https://github.com/BillowRock/PatternRecognition/raw/master/minibatchSGD/overfit_circle.png)  
+
 可看出分类曲线出现了对数据集的迎合，但因容量增加有限，与合理拟合效果相差不大
