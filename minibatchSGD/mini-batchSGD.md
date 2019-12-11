@@ -52,12 +52,12 @@ $\}$
 
 # 合理拟合
 ![训练损失](https://github.com/BillowRock/PatternRecognition/raw/master/minibatchSGD/fit_loss.png)  
-![合理拟合拟合](https://github.com/BillowRock/PatternRecognition/raw/master/minibatchSGD/fit_circle.png)  
+![合理拟合](https://github.com/BillowRock/PatternRecognition/raw/master/minibatchSGD/fit_circle.png)  
 
 选取正确多项式，拟合结果正常
 
 # 过拟合
 ![训练损失](https://github.com/BillowRock/PatternRecognition/raw/master/minibatchSGD/overfit_loss.png)  
-![欠拟合](https://github.com/BillowRock/PatternRecognition/raw/master/minibatchSGD/overfit_circle.png)  
+![过拟合](https://github.com/BillowRock/PatternRecognition/raw/master/minibatchSGD/overfit_circle.png)  
 
 可看出分类曲线出现了对数据集的迎合，但因容量增加有限，与合理拟合效果相差不大
