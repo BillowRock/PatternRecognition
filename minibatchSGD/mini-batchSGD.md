@@ -44,19 +44,19 @@ $$\theta_{j}:=\theta_{j}-\alpha \frac{1}{m} \sum_{i=1}^{m}\left(h_{\theta}\left(
 可以看出，$\theta_{j}$更新和线性回归中梯度下降算法的$\theta_{j}$更新一致，差别的是假设函数$h_{\theta}$不同。
 ## 运行结果
 
-# 欠拟合
+### 欠拟合
 ![训练损失](https://github.com/BillowRock/PatternRecognition/raw/master/minibatchSGD/underfit_loss.png)  
 ![欠拟合](https://github.com/BillowRock/PatternRecognition/raw/master/minibatchSGD/underfit_circle.png)  
 
 可以看出在欠拟合情况下无法进行拟合，训练后对测试集分类正确率仅有50%左右，基本没效果
 
-# 合理拟合
+### 合理拟合
 ![训练损失](https://github.com/BillowRock/PatternRecognition/raw/master/minibatchSGD/fit_loss.png)  
 ![合理拟合](https://github.com/BillowRock/PatternRecognition/raw/master/minibatchSGD/fit_circle.png)  
 
 选取正确多项式，拟合结果正常
 
-# 过拟合
+### 过拟合
 ![训练损失](https://github.com/BillowRock/PatternRecognition/raw/master/minibatchSGD/overfit_loss.png)  
 ![过拟合](https://github.com/BillowRock/PatternRecognition/raw/master/minibatchSGD/overfit_circle.png)  
 
